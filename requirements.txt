@@ -1,5 +1,3 @@
-numpy==1.16.5
-pandas==0.25.1
 pycaret==2.3.2
 seaborn==0.9.0
 streamlit==1.6.0
