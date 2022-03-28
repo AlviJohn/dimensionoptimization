@@ -28,7 +28,7 @@ model_fpindex=models[0]
 model_contactarea=models[1]
 #st.write(model_contactarea)    
 
-Mould_SD = st.sidebar.slider(label = 'Mould_SD', min_value = 5,
+Mould_SD = st.sidebar.slider(label = 'Mould_SD', min_value = 3,
                           max_value = 15 ,
                           value = 10,
                           step = 1)
