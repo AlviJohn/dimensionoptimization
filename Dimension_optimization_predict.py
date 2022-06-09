@@ -16,8 +16,8 @@ def predict_quality(model, df):
     
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def loadmodel():
-    model_fpindex = load_model('Final_FP_Index_Model')
-    model_contactarea = load_model('Final_Contactarea_Model')
+    model_fpindex = load_model('Final_FP_Index_Model.pkl')
+    model_contactarea = load_model('Final_Contactarea_Model.pkl')
     return model_fpindex,model_contactarea
         
 
