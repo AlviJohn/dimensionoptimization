@@ -16,10 +16,8 @@ def predict_quality(model, df):
     
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def loadmodel():
-    with open('FP_Index_Model.pkl', "rb") as f:
-        model_fpindex = pickle.load(f)
-    with open('Contactarea_Model.pkl', "rb") as f:
-        model_contactarea = pickle.load(f)
+    model_fpindex = load_model('Final_FP_Index_Model')
+    model_contactarea = load_model('Final_Contactarea_Model')
     return model_fpindex,model_contactarea
         
 
@@ -28,7 +26,7 @@ model_fpindex=models[0]
 model_contactarea=models[1]
 #st.write(model_contactarea)    
 
-Mould_SD = st.sidebar.slider(label = 'Mould_SD', min_value = 3,
+Mould_SD = st.sidebar.slider(label = 'Mould_SD', min_value = 5,
                           max_value = 15 ,
                           value = 10,
                           step = 1)
