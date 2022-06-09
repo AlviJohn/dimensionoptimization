@@ -14,10 +14,10 @@ def predict_quality(model, df):
     predictions_data = predict_model(model,data=df)
     return predictions_data['Label'][0]
     
-@st.cache(suppress_st_warning=True,allow_output_mutation=True)
+#@st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def loadmodel():
-    model_fpindex = load_model('Final_FP_Index_Model.pkl')
-    model_contactarea = load_model('Final_Contactarea_Model.pkl')
+    model_fpindex = load_model('Final_FP_Index_Model')
+    model_contactarea = load_model('Final_Contactarea_Model')
     return model_fpindex,model_contactarea
         
 
